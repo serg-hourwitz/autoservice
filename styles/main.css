@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--f-primary);
+  color: var(--c-primary);
+  background-color: var(--c-black);
+  height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin:  0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+input, select {
+  width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

@@ -1,0 +1,26 @@
+:root {
+  /* Fonts */
+
+  --f-primary: "Montserrat";
+  --f-secondary: "Inter";
+  --f-send: "Arial";
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-primary: 20px;
+  --fs-middle: 28px;
+  --fs-secondary: 40px;
+  --fs-small: 16px;
+  --fs-extra-small: 14px;
+  --fs-little: 11px;
+  --fs-big: 48px;
+  --fs-big: 70px;
+
+  /* Colors */
+
+  --c-primary: #ffffff;
+  --c-black: #1E2026;
+  --c-blue: #002A52;
+}     
