@@ -177,14 +177,25 @@
   font-weight: var(--fw-medium);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .header-banner-title {
-    font-size: var(--fs-middle);
+    font-size: var(--fs-secondary);
   }
 
+  .header-banner-text {
+    font-size: var(--fs-middle);
+    font-weight: var(--fw-regular);
+  }
+}
+
+@media (max-width: 576px) {
   .header-banner-wrapper {
     padding: 0;
     background: none;
+  }
+
+  .header-banner-title {
+    font-size: var(--fs-middle);
   }
 
   .header-banner-text {
@@ -262,4 +273,3 @@
 .about-characters-list-item:nth-of-type(3) {
   justify-content: flex-end;
 }
-
