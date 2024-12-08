@@ -12,7 +12,6 @@ const navClose = () => {
 burgerBtn.addEventListener('click', navOpen);
 
 const navItems = document.querySelectorAll('.header-nav-item');
-console.log(navItems);
 
 navItems.forEach(item => {
   item.addEventListener('click', navClose)

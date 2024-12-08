@@ -5,6 +5,7 @@
   --f-secondary: "Inter";
   --f-send: "Arial";
 
+  --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
@@ -16,11 +17,12 @@
   --fs-extra-small: 14px;
   --fs-little: 11px;
   --fs-big: 48px;
-  --fs-big: 70px;
+  --fs-large: 70px;
 
   /* Colors */
 
   --c-primary: #ffffff;
   --c-black: #1E2026;
   --c-blue: #002A52;
+  --c-light-blue: #0053A4;
 }     

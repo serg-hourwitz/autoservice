@@ -10,7 +10,6 @@ body {
   font-family: var(--f-primary);
   color: var(--c-primary);
   background-color: var(--c-black);
-  height: 100vh;
 }
 
 .container {
@@ -18,6 +17,10 @@ body {
   margin:  0 auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.wrapper {
+  max-width: 1440px;
 }
 
 img {
@@ -49,3 +52,5 @@ ul {
   stroke: currentColor;
   fill: currentColor;
 }
+
+
