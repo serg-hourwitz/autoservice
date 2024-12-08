@@ -14,7 +14,7 @@ body {
 
 .container {
   max-width: 1280px;
-  margin:  0 auto;
+  margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -27,13 +27,25 @@ img {
   width: 100%;
 }
 
-input, select {
+input,
+select {
   width: 100%;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
+
+h2 {
+  text-align: center;
+  font-size: var(--fs-secondary);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 30px;
+}
+
+
 
 a {
   text-decoration: none;
@@ -52,5 +64,3 @@ ul {
   stroke: currentColor;
   fill: currentColor;
 }
-
-
