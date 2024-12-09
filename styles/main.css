@@ -45,7 +45,11 @@ h2 {
   margin-bottom: 30px;
 }
 
-
+@media (max-width: 576px) {
+  h2 {
+    font-size: var(--fs-primary);
+  }
+}
 
 a {
   text-decoration: none;
