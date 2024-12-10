@@ -348,3 +348,57 @@
     display: block;
   }
 }
+
+/* cars */
+
+.cars {
+  padding: 60px 0 60px;
+  background-color: var(--c-blue);
+}
+
+.cars-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cars-text {
+  font-size: var(--fs-secondary);
+}
+
+.cars-item-title {
+  text-decoration: underline;
+}
+
+.title-top {
+  margin-bottom: 20px;
+}
+
+.title-bottom {
+  margin-top: 20px;
+}
+
+.cars-wrapper-row-top, .cars-wrapper-row-bottom {
+  display: flex;
+  gap: 130px;
+}
+
+.cars-wrapper-row-bottom {
+  margin-top: -50px;
+  justify-content: end;
+}
+
+.cars-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cars-item img {
+  width: 440px;
+  height: 300px;
+}
+
+.cars-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
