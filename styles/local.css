@@ -45,6 +45,7 @@
 
 .header-nav-mail-link {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -103,7 +104,7 @@
     gap: 10px;
     align-items: start;
     position: absolute;
-    top: 120px;
+    top: 60px;
     left: 0;
     transform: translateX(-100%);
     padding: 10px;
@@ -332,9 +333,6 @@
 }
 
 @media (max-width: 576px) {
-  .about {
-    padding-bottom: 0;
-  }
 
   .about-characters-image {
     display: block;
@@ -475,6 +473,10 @@
   .cars-hidden {
     display: block;
   }
+
+  .cars-slider {
+    margin-bottom: 0;
+  }
 }
 
 /* Services */
@@ -533,4 +535,70 @@
     flex-direction: column;
     gap: 30px;
   }
+}
+
+/* advantages */
+
+.advantages-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.advantages-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 240px;
+}
+
+.advantages-numbers-item {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-sub-big);
+  font-weight: var(--fw-semibold);
+  background-color: var(--c-blue);
+  border-radius: 50%;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-body {
+  background-color: var(--c-blue);
+}
+
+.accordion-button {
+  background-color: var(--c-black);
+  color: var(--c-primary);
+}
+
+.accordion-button-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 40px;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  content: "";
+  background-image: url(../images/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  transition: transform .2s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../images/chevron-down.svg);
+  transform: rotate(-90deg);
 }
