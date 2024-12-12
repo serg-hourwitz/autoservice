@@ -656,7 +656,9 @@
 }
 
 /* about numbers */
-
+.about-numbers {
+  padding-bottom: 80px;
+}
 .about-numbers-wrapper {
   background-color: var(--c-blue);
   padding: 65px 0 65px;
@@ -718,3 +720,6 @@
   }
 
 }
+
+/* form */
+

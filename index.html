@@ -591,6 +591,72 @@
               </div>
             </div>
           </section>
+          <!-- booking -->
+          <section class="booking" id="booking">
+            <div class="booking-header-text">Записатись на діагностику</div>
+            <div class="booking-text">
+              Зробіть перший крок до надійності вашого автомобіля!
+            </div>
+            <!-- form -->
+            <form action="#" method="post" class="booking-form">
+              <div class="booking-form-row-top">
+                <label for="name">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value=""
+                    placeholder="Ім’я"
+                    required
+                  />
+                </label>
+                <label for="date">
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value=""
+                    placeholder="Дата"
+                    required
+                  />
+                </label>
+                <label for="time">
+                  <input
+                    type="time"
+                    id="time"
+                    name="time"
+                    value=""
+                    placeholder="Час"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="booking-form-row-bottom">
+                <label for="type">
+                  <select name="type" id="type" size="5" multiple>
+                    <option value="type" disabled>Тип діагностики</option>
+                    <option value="engine">Комп’ютерна діагностика двигуна</option>
+                    <option value="chassis">Діагностика ходової</option>
+                    <option value="diagnostics">Електронна діагностика</option>
+                    <option value="breacks">Діагностика гальмівної системи</option>
+                    <option value="climat">
+                      Перевірка кондиціонера та клімат-контролю
+                    </option>
+                  </select>
+                </label>
+                <label for="tel">
+                  <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="Номер телефону"
+                    required
+                  />
+                </label>
+              </div>
+              <button type="submit" id="booking-submin-btn">Відправити</button>
+            </form>
+          </section>
         </div>
       </main>
     </div>
