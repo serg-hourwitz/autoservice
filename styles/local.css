@@ -539,6 +539,10 @@
 
 /* advantages */
 
+.advantages {
+  padding-bottom: 80px;
+}
+
 .advantages-list {
   display: flex;
   align-items: center;
@@ -601,4 +605,116 @@
 .accordion-button:not(.collapsed)::after {
   background-image: url(../images/chevron-down.svg);
   transform: rotate(-90deg);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--c-primary);
+  background-color: var(--c-blue);
+}
+
+.accordion-button-text-title {
+  font-size: var(--fs-primary);
+}
+
+.accordion-button-text {
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 768px) {
+  .advantages-numbers {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .accordion-button-text-wrapper {
+    padding-left: 0;
+  }
+
+  .advantages-list {
+    gap: 10px;
+  }
+
+  .advantages-numbers {
+    justify-content: space-around;
+  }
+
+  .advantages-numbers-item {
+    width: 30px;
+    height: 30px;
+    font-size: var(--fs-sub-big-middle);
+  }
+
+  .accordion-button-text-title {
+    font-size: var(--fs-small);
+  }
+
+  .accordion-button-text {
+    font-size: var(--fs-extra-small);
+  }
+}
+
+/* about numbers */
+
+.about-numbers-wrapper {
+  background-color: var(--c-blue);
+  padding: 65px 0 65px;
+}
+
+.about-numbers-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-numbers-item {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0 40px;
+  border: 1px solid var(--c-primary);
+}
+
+.about-numbers-digit {
+  font-size: var(--fs-big);
+  margin-bottom: 20px;
+}
+
+.about-numbers-text {
+  font-size: var(--fs-primary);
+}
+
+@media (max-width: 1200px) {
+  .about-numbers-container {
+    max-width: 790px;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-numbers-container {
+    align-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .about-numbers-container {
+    flex-direction: unset;
+  }
+  .about-numbers-item {
+    width: 150px;
+    padding: 2px 0 2px;
+  }
+
+  .about-numbers-digit {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
 }
