@@ -610,40 +610,6 @@
                     required
                   />
                 </label>
-                <label for="date">
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    value=""
-                    placeholder="Дата"
-                    required
-                  />
-                </label>
-                <label for="time">
-                  <input
-                    type="time"
-                    id="time"
-                    name="time"
-                    value=""
-                    placeholder="Час"
-                    required
-                  />
-                </label>
-              </div>
-              <div class="booking-form-row-bottom">
-                <label for="type">
-                  <select name="type" id="type" size="5" multiple>
-                    <option value="type" disabled>Тип діагностики</option>
-                    <option value="engine">Комп’ютерна діагностика двигуна</option>
-                    <option value="chassis">Діагностика ходової</option>
-                    <option value="diagnostics">Електронна діагностика</option>
-                    <option value="breacks">Діагностика гальмівної системи</option>
-                    <option value="climat">
-                      Перевірка кондиціонера та клімат-контролю
-                    </option>
-                  </select>
-                </label>
                 <label for="tel">
                   <input
                     type="tel"
@@ -653,12 +619,134 @@
                     required
                   />
                 </label>
+                <label for="date">
+                  <input
+                    type="text"
+                    id="date"
+                    name="date"
+                    value=""
+                    placeholder="Дата"
+                    required
+                  />
+                </label>
               </div>
-              <button type="submit" id="booking-submin-btn">Відправити</button>
+              <div class="booking-form-row-bottom">
+                <label for="type">
+                  <select name="type" id="type">
+                    <option value="type">Діагностика</option>
+                    <option value="engine">Двигуна</option>
+                    <option value="chassis">Ходової</option>
+                    <option value="diagnostics">Електронна</option>
+                    <option value="breacks">Гальмівної системи</option>
+                    <option value="climat">Кондиціонера</option>
+                  </select>
+                </label>
+                <label for="time">
+                  <input
+                    type="text"
+                    id="time"
+                    name="time"
+                    value=""
+                    placeholder="Час"
+                    required
+                  />
+                </label>
+              </div>
+              <button
+                type="submit"
+                id="booking-submit-btn"
+                class="booking-submit-btn"
+              >
+                Відправити
+              </button>
             </form>
           </section>
         </div>
       </main>
+      <!-- Footer -->
+      <footer class="footer" id="contacts">
+        <div class="footer-container container">
+          <div class="footer-contacts">
+            <h2 class="section-title">Контакти</h2>
+            <!-- phone -->
+            <div class="footer-contacts-phone">
+              <div class="footer-contacts-phone-text">Телефон:</div>
+              <a href="tel:+380950000000" class="footer-contacts-phone-text"
+                >+380950000000</a
+              >
+            </div>
+            <!-- address -->
+            <div class="footer-contacts-address">
+              <div class="footer-contacts-address-text">Адреса:</div>
+              <div class="footer-contacts-address-text">
+                Австрія, м. Гляйсдорф
+                <a href="https://g.co/kgs/xdgC9vL" target="_blank"
+                  >https://g.co/kgs/xdgC9vL</a
+                >
+              </div>
+            </div>
+            <!-- working hours -->
+            <div class="footer-contacts-schedule">
+              <div
+                class="footer-contacts-shedule-text"
+                style="margin-bottom: 10px"
+              >
+                Режим роботи:
+              </div>
+              <div class="footer-contacts-shedule-text">
+                Понеділок - Пʼятниця 8:00-21:30
+              </div>
+              <div class="footer-contacts-shedule-text" style="display: flex">
+                Субота <span class="space"></span> 10:00-19:00
+              </div>
+              <div class="footer-contacts-shedule-text" style="display: flex">
+                Неділя <span class="space"></span> вихідний.
+              </div>
+            </div>
+            <!-- socials -->
+            <div class="footer-contacts-socials">
+              <div
+                class="footer-contacts-socials-text"
+                style="margin-bottom: 10px"
+              >
+                Ми в соціальних мережах:
+              </div>
+              <div class="footer-contacts-socials-icons">
+                <a href="https://t.me/+380950000000">
+                  <img src="./images/contacts/telegram.svg" alt="telegram" />
+                </a>
+                <a href="https://wa.me/+380950000000">
+                  <img src="./images/contacts/whatsapp.svg" alt="whatsapp" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- map -->
+          <div class="footer-contacts-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21724.8790302954!2d15.689742498521625!3d47.10671809575694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e51b7d865316b%3A0x4a4cd8df13e8ef3a!2zODIwMCDQk9C70LDQudGB0LTQvtGA0YQsINCQ0LLRgdGC0YDQuNGP!5e0!3m2!1sru!2sua!4v1734103590798!5m2!1sru!2sua"
+              width="768"
+              height="436"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <hr />
+        <!-- copyright -->
+        <div class="footer-copyright">
+          <div class="footer-copyright-wrapper container">
+            <div class="footer-copyright-wrapper-text">
+              Copyright © autodiagnosepro Всі права захищені
+            </div>
+            <div class="footer-copyright-wrapper-text">
+              Політика конфіденціальності
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./main.js"></script>
     <script
