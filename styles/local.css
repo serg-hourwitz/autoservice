@@ -358,6 +358,12 @@
   }
 }
 
+@media (max-width: 320px) {
+  .about-characters-hidden-bottom-list {
+    gap: 15px;
+  }
+}
+
 /* cars */
 
 .cars {
@@ -377,7 +383,6 @@
 .cars-item-title {
   display: inline-block;
   border-bottom: 1px solid var(--c-primary);
-  /* text-decoration: underline; */
 }
 
 .title-top {
