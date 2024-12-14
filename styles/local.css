@@ -823,10 +823,19 @@ input::placeholder {
   }
 
   .booking-text {
-    width: 245px;
+    width: 300px;
     text-align: center;
     font-size: var(--fs-extra-small);
     margin-bottom: 20px;
+  }
+
+  input,
+  select {
+    width: 300px;
+  }
+
+  select {
+    background-position: 260px center, calc(100% - 10px) center;
   }
 
   .booking-form-row-top,
@@ -861,6 +870,13 @@ input::placeholder {
   gap: 30px;
 }
 
+.footer-contacts-row-top,
+.footer-contacts-row-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .space {
   display: block;
   width: 30px;
@@ -884,9 +900,7 @@ input::placeholder {
 .footer-contacts-map {
   position: relative;
   width: 63%;
-  /* Ширина 100% контейнера */
   padding-top: 37.25%;
-  /* Співвідношення сторін 16:9 */
 }
 
 .footer-contacts-map iframe {
@@ -894,21 +908,47 @@ input::placeholder {
   top: 0;
   left: 0;
   width: 100%;
-  /* Адаптивна ширина */
   height: 100%;
-  /* Адаптивна висота */
   border: 0;
-  /* Видаляємо рамку */
 }
 
 @media (max-width: 992px) {
   .footer-container {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     padding: 60px 10px 30px;
   }
 
+  .footer-contacts {
+    width: 100%;
+  }
+
   .footer-contacts h2 {
     margin-bottom: unset;
+  }
+
+  .footer-contacts-row-top,
+  .footer-contacts-row-bottom {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer-contacts-map {
+    width: 100%;
+    padding-top: 57.25%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer-contacts-row-top,
+  .footer-contacts-row-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
   }
 }
