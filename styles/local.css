@@ -375,7 +375,9 @@
 }
 
 .cars-item-title {
-  text-decoration: underline;
+  display: inline-block;
+  border-bottom: 1px solid var(--c-primary);
+  /* text-decoration: underline; */
 }
 
 .title-top {
@@ -399,8 +401,6 @@
 }
 
 .cars-item {
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 
