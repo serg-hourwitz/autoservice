@@ -48,9 +48,11 @@ export function validationForm() {
         hasErrors = true;
       }
 
-      // Якщо помилок немає, відправляємо форму
+      // Якщо помилок немає, показуємо модальне вікно
       if (!hasErrors) {
-        alert('Форма успішно відправлена!');
+        showModal(
+          `Шановний ${nameInput.value}! </br> Вашу заявку за номером ${telInput.value} на діагностику ${typeSelect.value} на ${timeInput.value} ${dateInput.value} прийнято!`
+        );
         form.reset(); // Скидаємо форму
       }
     });
@@ -72,6 +74,65 @@ export function validationForm() {
       const inputs = document.querySelectorAll('.input-error');
       inputs.forEach((input) => input.classList.remove('input-error'));
     }
-  });
 
+    // Функція для показу модального вікна
+    function showModal(message) {
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.innerHTML = `
+      <div class="modal-content">
+        <p>${message}</p>
+        <button class="modal-close">Закрити</button>
+      </div>
+    `;
+      document.body.appendChild(modal);
+
+      const closeButton = modal.querySelector('.modal-close');
+      closeButton.addEventListener('click', () => {
+        modal.remove();
+      });
+
+      // Додаємо стилі для модального вікна
+      const style = document.createElement('style');
+      style.textContent = `
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .modal-content {
+        width: 300px;
+        background: var(--c-black);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .modal-close {
+        font-weight: var(--fw-semibold);
+        font-family: var(--f-send);
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: var(--c-blue);
+        color: var(--c-primary);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+      }
+      .modal-close:hover {
+        background: var(--c-primary);
+        color: var(--c-blue);
+      }
+    `;
+      document.head.appendChild(style);
+    }
+  });
 }
