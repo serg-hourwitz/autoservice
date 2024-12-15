@@ -267,21 +267,24 @@
 
 .about-characters-list-item {
   display: flex;
+  align-items: center;
   flex-direction: column;
   text-align: center;
+  width: 54%;
 }
 
-.skills-title::before, .support-title::before, .short-terms-title::before {
+.skills-title::before,
+.support-title::before,
+.short-terms-title::before {
   content: url(../images/ok.svg);
   padding-right: 15px;
 }
 
-.about-characters-list-item:nth-of-type(2) {
-  justify-content: center;
-}
-
-.about-characters-list-item:nth-of-type(3) {
-  justify-content: flex-end;
+.skills-title,
+.short-terms-title,
+.support-title {
+  display: flex;
+  align-items: center;
 }
 
 .about-characters-hidden-top {
