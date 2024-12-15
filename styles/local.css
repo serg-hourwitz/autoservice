@@ -181,6 +181,7 @@
   margin: 0 auto;
   padding: 16px 18px;
   background-color: var(--c-blue);
+  text-align: center;
   color: var(--c-primary);
   font-size: var(--fs-primary);
   font-weight: var(--fw-medium);
@@ -266,10 +267,11 @@
 
 .about-characters-list-item {
   display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.about-characters-list-item-text::before {
+.skills-title::before, .support-title::before, .short-terms-title::before {
   content: url(../images/ok.svg);
   padding-right: 15px;
 }

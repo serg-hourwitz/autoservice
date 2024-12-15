@@ -7,5 +7,5 @@ textHidden();
 import { validationForm } from "./form.js";
 validationForm();
 
-
-
+import { siteTranslate } from "./translation.js";
+siteTranslate();
