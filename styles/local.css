@@ -100,9 +100,11 @@
 
   .header-nav-list {
     width: 100%;
+    height: 100vh;
     flex-direction: column;
     gap: 10px;
     align-items: start;
+    justify-content: unset;
     position: absolute;
     top: 60px;
     left: 0;
@@ -124,6 +126,12 @@
 @media (max-width: 344px) {
   .header-nav {
     flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-nav-lang-ger {
+    display: none;
   }
 }
 
