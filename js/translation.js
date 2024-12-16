@@ -61,6 +61,17 @@ export function siteTranslate() {
         climateDescription:
           'Оцінка ефективності роботи системи охолодження та очищення повітря.',
         bookingBtn: 'Записатися на діагностику',
+        // advantages
+        advantagesTitle: 'Наші переваги',
+        advantageOneTitle: 'Сучасне обладнання',
+        advantageOneText:
+          'Використовуємо новітні діагностичні системи для точного аналізу.',
+        advantageTwoTitle: 'Досвідчені майстри',
+        advantageTwoText:
+          'Команда професіоналів з великим досвідом роботи в автосервісі.',
+        advantageThreeTitle: 'Швидкість та зручність',
+        advantageThreeText:
+          'Діагностика проводиться швидко, щоб заощадити ваш час.',
       },
       de: {
         // navigation
@@ -125,6 +136,17 @@ export function siteTranslate() {
         climateDescription:
           'Bewertung der Effizienz des Kühl- und Luftreinigungssystems.',
         bookingBtn: 'Vereinbaren Sie einen Termin zur Diagnose',
+        // advantages
+        advantagesTitle: 'Unsere Vorteile',
+        advantageOneTitle: 'Moderne Ausrüstung',
+        advantageOneText:
+          'Wir verwenden die neuesten Diagnosesysteme für eine genaue Analyse.',
+        advantageTwoTitle: 'Erfahrene Fachleute',
+        advantageTwoText:
+          'Ein Team von Fachleuten mit langjähriger Erfahrung im Autoservice.',
+        advantageThreeTitle: 'Schnelligkeit und Komfort',
+        advantageThreeText:
+          'Die Diagnosen werden schnell durchgeführt, damit Sie Zeit sparen.',
       },
     };
 
@@ -179,6 +201,14 @@ export function siteTranslate() {
       climateTitle: document.querySelector('.climate-title'),
       climateDescription: document.querySelector('.climate-description'),
       bookingBtn: document.querySelector('.booking-btn'),
+      // advantages
+      advantagesTitle: document.querySelector('.advantages-title'),
+      advantageOneTitle: document.querySelector('.advantage-one-title'),
+      advantageOneText: document.querySelector('.advantage-one-text'),
+      advantageTwoTitle: document.querySelector('.advantage-two-title'),
+      advantageTwoText: document.querySelector('.advantage-two-text'),
+      advantageThreeTitle: document.querySelector('.advantage-three-title'),
+      advantageThreeText: document.querySelector('.advantage-three-text'),
     };
 
     const ukFlag = document.querySelector('.header-nav-lang-ukr');
