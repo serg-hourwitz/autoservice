@@ -72,6 +72,12 @@ export function siteTranslate() {
         advantageThreeTitle: 'Швидкість та зручність',
         advantageThreeText:
           'Діагностика проводиться швидко, щоб заощадити ваш час.',
+        // numbers
+        aboutNumbersTitle: 'Трохи цифр про нас',
+        projectsNumber: 'Реалізованих проектів',
+        clearNumber: 'Кількість поліровок',
+        clearNumber: 'Кількість хімчисток',
+        studioNumber: 'Кількість студій',
       },
       de: {
         // navigation
@@ -147,6 +153,12 @@ export function siteTranslate() {
         advantageThreeTitle: 'Schnelligkeit und Komfort',
         advantageThreeText:
           'Die Diagnosen werden schnell durchgeführt, damit Sie Zeit sparen.',
+        // numbers
+        aboutNumbersTitle: 'Einige Zahlen zu uns',
+        projectsNumber: 'Realisierte Projekte',
+        clearNumber: 'Anzahl der Polituren',
+        polishNumber: 'Anzahl der Reinigungen',
+        studioNumber: 'Zahl der Studios',
       },
     };
 
@@ -209,6 +221,12 @@ export function siteTranslate() {
       advantageTwoText: document.querySelector('.advantage-two-text'),
       advantageThreeTitle: document.querySelector('.advantage-three-title'),
       advantageThreeText: document.querySelector('.advantage-three-text'),
+      // numbers
+      aboutNumbersTitle: document.querySelector('.about-numbers-title'),
+      projectsNumber: document.querySelector('.projects-number'),
+      polishNumber: document.querySelector('.polish-number'),
+      clearNumber: document.querySelector('.clear-number'),
+      studioNumber: document.querySelector('.studio-number'),
     };
 
     const ukFlag = document.querySelector('.header-nav-lang-ukr');
