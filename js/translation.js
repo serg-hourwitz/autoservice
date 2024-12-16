@@ -25,6 +25,42 @@ export function siteTranslate() {
         shortTermsTitle: 'Швидкість виконання:',
         shortTerms:
           'Ми прагнемо оптимізувати процес покращення Вашого авто і прагнемо надати послуги  не тільки високоякісно, але й швидко.',
+        // car types
+        carsText: 'Працюємо з різними типами автомобілей та систем',
+        car: 'Легкові авто',
+        electric: 'Електромобілі',
+        tracks: 'Вантажні',
+        hybrid: 'Гібриди',
+        // car types - hidden
+        carsHiddenText: 'Працюємо з різними типами автомобілей та систем',
+        textHidden:
+          'Ми віримо в якісний догляд за вашим авто! Захоплення автомобілями для нас — це не просто робота, а справжня пристрасть, тому ми досконало знаємо, як забезпечити найкращий сервіс. Дотримання термінів -',
+        readMore: 'читати далі...',
+        readLess: '...згорнути',
+        textHiddenHidden:
+          'наш пріоритет, і завдяки системі попереднього запису ви завжди отримуєте своє авто вчасно. Ми приділяємо увагу кожній дрібниці, викладаємося на всі 110% і робимо все, щоб ваш автомобіль виглядав бездоганно.',
+        carHidden: 'легкові авто',
+        electricHidden: 'електромобілі',
+        tracksHidden: 'вантажні',
+        hybridHidden: 'гібриди',
+        // services
+        services: 'Послуги',
+        engineTitle: 'Комп’ютерна діагностика двигуна',
+        engineDescription:
+          'Точний аналіз роботи двигуна для виявлення несправностей.',
+        chassisTitle: 'Діагностика ходової',
+        chassisDescription:
+          'Перевірка амортизаторів, підшипників, підвісок та інших елементів для безпечної їзди',
+        diagnosticsTitle: 'Електронна діагностика',
+        diagnosticsDescription:
+          'Огляд електронних систем автомобіля — від сигналізації до мультимедійних систем.',
+        brakeTitle: 'Діагностика гальмівної системи',
+        brakeDescription:
+          'Виявлення зносу колодок, стану гальмівних дисків та ефективності роботи гальм.',
+        climateTitle: 'Перевірка кондиціонера та клімат-контролю',
+        climateDescription:
+          'Оцінка ефективності роботи системи охолодження та очищення повітря.',
+        bookingBtn: 'Записатися на діагностику',
       },
       de: {
         // navigation
@@ -50,6 +86,45 @@ export function siteTranslate() {
         shortTermsTitle: 'Schnelligkeit der Durchführung:',
         shortTerms:
           'Wir sind bestrebt, den Prozess der Verbesserung Ihres Fahrzeugs zu optimieren und wollen nicht nur qualitativ hochwertige, sondern auch schnelle Dienstleistungen anbieten.',
+        // car types
+        carsText:
+          'Wir arbeiten mit verschiedenen Arten von Fahrzeugen und Systemen',
+        car: 'Personenkraftwagen',
+        electric: 'Elektrische Fahrzeuge',
+        tracks: 'Fracht',
+        hybrid: 'Hybriden',
+        // car types - hidden
+        textHiddenTop: 'Warum unser Studio?',
+        textHidden:
+          ' Wir glauben an die Qualität der Pflege für Ihr Auto! Für uns ist die Leidenschaft für Autos nicht nur ein Job, sondern eine echte Leidenschaft. Deshalb wissen wir genau, wie wir Ihnen den besten Service bieten können. Einhaltung der Fristen -',
+        readMore: 'mehr...',
+        readLess: '...einstürzen',
+        textHiddenHidden:
+          'ist unsere Priorität, und dank des Terminsystems erhalten Sie Ihr Auto immer pünktlich. Wir achten auf jedes Detail, geben unsere 110% und tun alles, damit Ihr Auto perfekt aussieht.',
+        carsHiddenText:
+          'Wir arbeiten mit verschiedenen Arten von Fahrzeugen und Systemen',
+        carHidden: 'personenkraftwagen',
+        electricHidden: 'elektrische fahrzeuge',
+        tracksHidden: 'fracht',
+        hybridHidden: 'hybriden',
+        // services
+        services: 'Dienstleistungen',
+        engineTitle: 'Computergestützte Motordiagnose',
+        engineDescription:
+          'Präzise Analyse der Motorleistung zur Ermittlung von Fehlern.',
+        chassisTitle: 'Fahrgestell-Diagnose',
+        chassisDescription:
+          'Kontrolle von Stoßdämpfern, Lagern, Aufhängungen und anderen Elementen für sicheres Fahren',
+        diagnosticsTitle: 'Elektronische Diagnostik',
+        diagnosticsDescription:
+          'Ein Überblick über die elektronischen Systeme des Fahrzeugs - von der Alarmanlage bis zum Multimediasystem.',
+        brakeTitle: 'Diagnose der Bremsen',
+        brakeDescription:
+          'Erkennen Sie Belagverschleiß, Zustand der Bremsscheiben und Bremsleistung.',
+        climateTitle: 'Überprüfung der Klimaanlage und Klimatisierung',
+        climateDescription:
+          'Bewertung der Effizienz des Kühl- und Luftreinigungssystems.',
+        bookingBtn: 'Vereinbaren Sie einen Termin zur Diagnose',
       },
     };
 
@@ -72,6 +147,38 @@ export function siteTranslate() {
       support: document.querySelector('.support'),
       shortTermsTitle: document.querySelector('.short-terms-title'),
       shortTerms: document.querySelector('.short-terms'),
+      // car types
+      carsText: document.querySelector('.cars-text'),
+      car: document.querySelector('.car'),
+      electric: document.querySelector('.electric'),
+      tracks: document.querySelector('.tracks'),
+      hybrid: document.querySelector('.hybrid'),
+      // cars types - hidden
+      textHiddenTop: document.querySelector('.text-hidden-top'),
+      textHidden: document.querySelector('.text-hidden-text'),
+      textHiddenHidden: document.querySelector('.text-hidden-hidden'),
+      readMore: document.querySelector('.read-more'),
+      readLess: document.querySelector('.read-less'),
+      carsHiddenText: document.querySelector('.cars-hidden-text'),
+      carHidden: document.querySelector('.car-hidden'),
+      electricHidden: document.querySelector('.electric-hidden'),
+      tracksHidden: document.querySelector('.tracks-hidden'),
+      hybridHidden: document.querySelector('.hybrid-hidden'),
+      // services
+      services: document.getElementById('services'),
+      engineTitle: document.querySelector('.engine-title'),
+      engineDescription: document.querySelector('.engine-description'),
+      chassisTitle: document.querySelector('.chassis-title'),
+      chassisDescription: document.querySelector('.chassis-description'),
+      diagnosticsTitle: document.querySelector('.diagnostics-title'),
+      diagnosticsDescription: document.querySelector(
+        '.diagnostics-description'
+      ),
+      brakeTitle: document.querySelector('.brake-title'),
+      brakeDescription: document.querySelector('.brake-description'),
+      climateTitle: document.querySelector('.climate-title'),
+      climateDescription: document.querySelector('.climate-description'),
+      bookingBtn: document.querySelector('.booking-btn'),
     };
 
     const ukFlag = document.querySelector('.header-nav-lang-ukr');

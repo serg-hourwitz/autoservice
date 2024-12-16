@@ -287,13 +287,17 @@
   align-items: center;
 }
 
+.about-characters-image img {
+  height: 100%;
+}
+
 .about-characters-hidden-top {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .text-hidden-hidden,
-.about-characters-hidden-top {
+.about-characters-hidden-top, .read-less {
   display: none;
 }
 

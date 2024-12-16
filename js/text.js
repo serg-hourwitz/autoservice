@@ -10,6 +10,7 @@ export function textHidden() {
     const toggleVisibility = (isVisible) => {
       hiddenText.classList.toggle('visible', isVisible); // Текст стає видимим/прихованим
       readMoreLink.classList.toggle('hidden', isVisible); // Ховаємо/показуємо "читати далі"
+      readLessLink.classList.toggle('visible', isVisible); // Ховаємо/показуємо "читати далі"
     };
 
     readMoreLink.addEventListener('click', (event) => {
