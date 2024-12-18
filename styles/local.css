@@ -907,8 +907,7 @@ input::placeholder {
 }
 
 .space {
-  display: block;
-  width: 30px;
+  margin-left: 30px;
 }
 
 .footer-contacts-socials-icons {

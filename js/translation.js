@@ -78,6 +78,23 @@ export function siteTranslate() {
         clearNumber: 'Кількість поліровок',
         clearNumber: 'Кількість хімчисток',
         studioNumber: 'Кількість студій',
+        // booking
+        bookingHeaderText: 'Записатись на діагностику',
+        bookingText: 'Зробіть перший крок до надійності вашого автомобіля!',
+        // form
+        // contacts
+        contactsTitle: 'Контакти',
+        contactsPhone: 'Телефон',
+        contactsAddress: 'Адреса',
+        address: 'Австрія, м. Гляйсдорф',
+        shedule: 'Режим роботи:',
+        weekdays: 'Понеділок - Пʼятниця 8:00-21:30',
+        saturday: 'Субота',
+        hours: '10:00-19:00',
+        sunday: 'Неділя вихідний',
+        socials: 'Ми в соціальних мережах:',
+        copyright: 'Copyright © autodiagnosepro Всі права захищені',
+        policy: 'Політика конфіденціальності',
       },
       de: {
         // navigation
@@ -159,6 +176,24 @@ export function siteTranslate() {
         clearNumber: 'Anzahl der Polituren',
         polishNumber: 'Anzahl der Reinigungen',
         studioNumber: 'Zahl der Studios',
+        // booking
+        bookingHeaderText: 'Vereinbaren Sie einen Termin zur Diagnose',
+        bookingText:
+          'Machen Sie den ersten Schritt zur Zuverlässigkeit Ihres Autos!',
+        // form
+        // contacts
+        contactsTitle: 'Kontakte',
+        contactsPhone: 'Telefon:',
+        contactsAddress: 'Adresse:',
+        address: 'Österreich, Gleisdorf',
+        shedule: 'Funktionsweise:',
+        weekdays: 'Montag - Freitag: 8:00-21:30',
+        saturday: 'Samstag',
+        hours: '10:00-19:00',
+        sunday: 'Sonntag ist ein freier Tag',
+        socials: 'Wir sind in den sozialen Medien:',
+        copyright: 'Copyright © autodiagnosepro Alle Rechte vorbehalten',
+        policy: 'Datenschutzbestimmungen',
       },
     };
 
@@ -227,6 +262,23 @@ export function siteTranslate() {
       polishNumber: document.querySelector('.polish-number'),
       clearNumber: document.querySelector('.clear-number'),
       studioNumber: document.querySelector('.studio-number'),
+      // booking
+      bookingHeaderText: document.querySelector('.booking-header-text'),
+      bookingText: document.querySelector('.booking-text'),
+      // form
+      // contacts
+      contactsTitle: document.querySelector('.contacts-title'),
+      contactsPhone: document.querySelector('.footer-contacts-phone-text'),
+      contactsAddress: document.querySelector('.footer-contacts-address-text'),
+      address: document.querySelector('.address'),
+      shedule: document.querySelector('.footer-contacts-shedule-text'),
+      weekdays: document.querySelector('.weekdays'),
+      saturday: document.querySelector('.saturday'),
+      hours: document.querySelector('.hours'),
+      sunday: document.querySelector('.sunday'),
+      socials: document.querySelector('.footer-contacts-socials-text'),
+      copyright: document.querySelector('.copyright'),
+      policy: document.querySelector('.policy'),
     };
 
     const ukFlag = document.querySelector('.header-nav-lang-ukr');
