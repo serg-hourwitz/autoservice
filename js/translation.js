@@ -180,7 +180,6 @@ export function siteTranslate() {
         bookingHeaderText: 'Vereinbaren Sie einen Termin zur Diagnose',
         bookingText:
           'Machen Sie den ersten Schritt zur Zuverlässigkeit Ihres Autos!',
-        // form
         // contacts
         contactsTitle: 'Kontakte',
         contactsPhone: 'Telefon:',

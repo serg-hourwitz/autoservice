@@ -581,8 +581,8 @@
 .advantages-numbers {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 240px;
+  justify-content: space-evenly;
+  height: 200px;
 }
 
 .advantages-numbers-item {
