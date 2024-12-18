@@ -10,4 +10,5 @@ validationForm();
 import { siteTranslate } from "./translation.js";
 siteTranslate();
 
-
+import { formTranslation } from "./form-translation.js";
+formTranslation();

@@ -283,12 +283,17 @@ export function siteTranslate() {
 
     const ukFlag = document.querySelector('.header-nav-lang-ukr');
     const deFlag = document.querySelector('.header-nav-lang-ger');
+    const autFlag = document.querySelector('.header-nav-lang-aut');
 
     ukFlag.addEventListener('click', () => {
       translatePage('uk');
     });
 
     deFlag.addEventListener('click', () => {
+      translatePage('de');
+    });
+
+    autFlag.addEventListener('click', () => {
       translatePage('de');
     });
 

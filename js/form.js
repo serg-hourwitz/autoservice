@@ -7,57 +7,126 @@ export function validationForm() {
     const typeSelect = document.querySelector('#type');
     const timeInput = document.querySelector('#time');
 
-    form.addEventListener('submit', (event) => {
-      // Скидаємо стандартну поведінку форми
-      event.preventDefault();
+    const ukFlag = document.querySelector('.header-nav-lang-ukr');
+    const deFlag = document.querySelector('.header-nav-lang-ger');
+    const autFlag = document.querySelector('.header-nav-lang-aut');
 
-      // Очищаємо попередні повідомлення про помилки
-      clearErrors();
+    // Словник для перекладів
+    const translations = {
+      uk: {
+        namePlaceholder: "Ваше ім'я",
+        telPlaceholder: 'Ваш номер телефону',
+        datePlaceholder: 'Виберіть дату',
+        timePlaceholder: 'Виберіть час',
+        typePlaceholder: 'Тип діагностики',
+        submitBtn: 'Надіслати',
+        errorName: 'Будь ласка, введіть своє ім’я.',
+        errorTel: 'Будь ласка, введіть коректний номер телефону.',
+        errorDate: 'Будь ласка, введіть дату у форматі YYYY-MM-DD.',
+        errorType: 'Будь ласка, виберіть тип діагностики.',
+        errorTime: 'Будь ласка, введіть час.',
+        modalMessage: (name, tel, type, time, date) =>
+          `Шановний ${name}! </br> Вашу заявку за номером ${tel} на діагностику ${type} на ${time} ${date} прийнято!`,
+        closeBtn: 'Закрити',
+      },
+      de: {
+        namePlaceholder: 'Ihr Name',
+        telPlaceholder: 'Ihre Telefonnummer',
+        datePlaceholder: 'Datum auswählen',
+        timePlaceholder: 'Uhrzeit auswählen',
+        typePlaceholder: 'Diagnosetyp',
+        submitBtn: 'Senden',
+        errorName: 'Bitte geben Sie Ihren Namen ein.',
+        errorTel: 'Bitte geben Sie eine gültige Telefonnummer ein.',
+        errorDate: 'Bitte geben Sie das Datum im Format JJJJ-MM-TT ein.',
+        errorType: 'Bitte wählen Sie einen Diagnosetyp aus.',
+        errorTime: 'Bitte geben Sie die Uhrzeit ein.',
+        modalMessage: (name, tel, type, time, date) =>
+          `Sehr geehrter ${name}, </br> Ihre Anfrage unter der Nummer ${tel} für eine Diagnose vom Typ ${type} am ${time} ${date} wurde angenommen!`,
+        closeBtn: 'Schließen',
+      },
+    };
+
+    let currentLang = 'uk';
+
+    // Функція для зміни тексту
+    function translateForm(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+
+      nameInput.placeholder = t.namePlaceholder;
+      telInput.placeholder = t.telPlaceholder;
+      dateInput.placeholder = t.datePlaceholder;
+      timeInput.placeholder = t.timePlaceholder;
+      typeSelect.querySelector('option').textContent = t.typePlaceholder;
+      form.querySelector('button[type="submit"]').textContent = t.submitBtn;
+    }
+
+    // Додаємо обробники кліків для прапорів
+    ukFlag.addEventListener('click', () => translateForm('uk'));
+    deFlag.addEventListener('click', () => translateForm('de'));
+    autFlag.addEventListener('click', () => translateForm('de'));
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      clearErrors(); // Видаляємо попередні помилки
 
       let hasErrors = false;
+      const t = translations[currentLang]; // Отримуємо переклади для поточної мови
 
       // Валідація імені
       if (!nameInput.value.trim()) {
-        showError(nameInput, 'Будь ласка, введіть своє ім’я.');
+        showError(nameInput, t.errorName);
         hasErrors = true;
       }
 
       // Валідація телефону
-      const telRegex = /^\+?\d{10,15}$/; // Перевіряємо міжнародний формат
+      const telRegex = /^\+?\d{10,15}$/;
       if (!telRegex.test(telInput.value.trim())) {
-        showError(telInput, 'Будь ласка, введіть коректний номер телефону.');
+        showError(telInput, t.errorTel);
         hasErrors = true;
       }
 
       // Валідація дати
-      const dateRegex = /^\d{4}-\d{2}-\d{2}$/; // Формат YYYY-MM-DD
+      const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
       if (!dateRegex.test(dateInput.value.trim())) {
-        showError(dateInput, 'Будь ласка, введіть дату у форматі YYYY-MM-DD.');
+        showError(dateInput, t.errorDate);
         hasErrors = true;
       }
 
       // Валідація типу діагностики
       if (typeSelect.value === 'type') {
-        showError(typeSelect, 'Будь ласка, виберіть тип діагностики.');
+        showError(typeSelect, t.errorType);
         hasErrors = true;
       }
 
       // Валідація часу
       if (!timeInput.value.trim()) {
-        showError(timeInput, 'Будь ласка, введіть час.');
+        showError(timeInput, t.errorTime);
         hasErrors = true;
       }
 
-      // Якщо помилок немає, показуємо модальне вікно
+      // Якщо немає помилок
       if (!hasErrors) {
+        // Відображаємо модальне вікно
         showModal(
-          `Шановний ${nameInput.value}! </br> Вашу заявку за номером ${telInput.value} на діагностику ${typeSelect.value} на ${timeInput.value} ${dateInput.value} прийнято!`
+          t.modalMessage(
+            nameInput.value,
+            telInput.value,
+            typeSelect.value,
+            timeInput.value,
+            dateInput.value
+          )
         );
-        form.reset(); // Скидаємо форму
+
+        // Скидаємо форму
+        form.reset();
+
+        // Очищаємо стилі полів (якщо було введено неправильні дані перед цим)
+        clearErrors(); // Ця функція вже видаляє помилки й стилі
       }
     });
 
-    // Функція для відображення помилки
     function showError(input, message) {
       const error = document.createElement('div');
       error.className = 'error-message';
@@ -67,7 +136,6 @@ export function validationForm() {
       input.classList.add('input-error');
     }
 
-    // Функція для очищення помилок
     function clearErrors() {
       const errors = document.querySelectorAll('.error-message');
       errors.forEach((error) => error.remove());
@@ -75,64 +143,21 @@ export function validationForm() {
       inputs.forEach((input) => input.classList.remove('input-error'));
     }
 
-    // Функція для показу модального вікна
     function showModal(message) {
       const modal = document.createElement('div');
       modal.className = 'modal';
       modal.innerHTML = `
-      <div class="modal-content">
-        <p>${message}</p>
-        <button class="modal-close">Закрити</button>
-      </div>
-    `;
+    <div class="modal-content">
+      <p>${message}</p>
+      <button class="modal-close">${translations[currentLang].closeBtn}</button>
+    </div>
+  `;
       document.body.appendChild(modal);
 
       const closeButton = modal.querySelector('.modal-close');
       closeButton.addEventListener('click', () => {
         modal.remove();
       });
-
-      // Додаємо стилі для модального вікна
-      const style = document.createElement('style');
-      style.textContent = `
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-      .modal-content {
-        width: 300px;
-        background: var(--c-black);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .modal-close {
-        font-weight: var(--fw-semibold);
-        font-family: var(--f-send);
-        margin-top: 10px;
-        padding: 10px 20px;
-        background: var(--c-blue);
-        color: var(--c-primary);
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: ease-in-out .3s;
-      }
-      .modal-close:hover {
-        background: var(--c-primary);
-        color: var(--c-blue);
-      }
-    `;
-      document.head.appendChild(style);
     }
   });
 }
