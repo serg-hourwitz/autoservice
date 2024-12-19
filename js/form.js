@@ -25,6 +25,14 @@ export function validationForm() {
         errorDate: 'Будь ласка, введіть дату у форматі YYYY-MM-DD.',
         errorType: 'Будь ласка, виберіть тип діагностики.',
         errorTime: 'Будь ласка, введіть час.',
+        options: [
+          'Діагностика',
+          'Двигуна',
+          'Ходової',
+          'Електронна',
+          'Гальмівної системи',
+          'Кондиціонера',
+        ],
         modalMessage: (name, tel, type, time, date) =>
           `Шановний ${name}! </br> Вашу заявку за номером ${tel} на діагностику ${type} на ${time} ${date} прийнято!`,
         closeBtn: 'Закрити',
@@ -41,11 +49,31 @@ export function validationForm() {
         errorDate: 'Bitte geben Sie das Datum im Format JJJJ-MM-TT ein.',
         errorType: 'Bitte wählen Sie einen Diagnosetyp aus.',
         errorTime: 'Bitte geben Sie die Uhrzeit ein.',
+        options: [
+          'Diagnose',
+          'Motor',
+          'Fahrwerk',
+          'Elektronik',
+          'Bremssystem',
+          'Klimaanlage',
+        ],
         modalMessage: (name, tel, type, time, date) =>
           `Sehr geehrter ${name}, </br> Ihre Anfrage unter der Nummer ${tel} für eine Diagnose vom Typ ${type} am ${time} ${date} wurde angenommen!`,
         closeBtn: 'Schließen',
       },
     };
+
+    // Функція для оновлення списку опцій
+    function updateOptions(lang) {
+      const t = translations[lang];
+      typeSelect.innerHTML = ''; // Очищаємо список
+      t.options.forEach((optionText, index) => {
+        const option = document.createElement('option');
+        option.value = index === 0 ? 'type' : optionText;
+        option.textContent = optionText;
+        typeSelect.appendChild(option);
+      });
+    }
 
     let currentLang = 'uk';
 
@@ -60,6 +88,8 @@ export function validationForm() {
       timeInput.placeholder = t.timePlaceholder;
       typeSelect.querySelector('option').textContent = t.typePlaceholder;
       form.querySelector('button[type="submit"]').textContent = t.submitBtn;
+
+      updateOptions(lang); // Оновлюємо список опцій
     }
 
     // Додаємо обробники кліків для прапорів
