@@ -333,6 +333,13 @@
   list-style-type: disc;
 }
 
+.about-characters-hidden-bottom-list.de {
+  width: 178px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1220px) {
   .about-characters {
     justify-content: center;
@@ -451,7 +458,14 @@
 }
 
 @media (max-width: 992px) {
+
+  .cars-wrapper-row-bottom .cars-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .title-bottom {
+    width: 80px;
     order: -1;
     margin-bottom: 20px;
   }

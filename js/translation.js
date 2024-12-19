@@ -290,10 +290,16 @@ export function siteTranslate() {
 
     deFlag.addEventListener('click', () => {
       translatePage('de');
+      document
+        .querySelector('.about-characters-hidden-bottom-list')
+        .classList.add('de');
     });
 
     autFlag.addEventListener('click', () => {
       translatePage('de');
+      document
+        .querySelector('.about-characters-hidden-bottom-list')
+        .classList.add('de');
     });
 
     function translatePage(lang) {
