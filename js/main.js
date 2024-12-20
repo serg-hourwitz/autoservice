@@ -2,7 +2,7 @@ import { burgerNav } from "./burger.js";
 burgerNav();
 
 import { textHidden } from "./text.js";
-textHidden();
+// textHidden();
 
 import { validationForm } from "./form.js";
 validationForm();
