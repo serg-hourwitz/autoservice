@@ -891,7 +891,7 @@
         // Розгортання тексту
         $('.read-more').click(function (e) {
           e.preventDefault(); // Забороняємо стандартну поведінку посилання
-          $('.text-hidden-hidden').slideDown('slow'); // Плавно показуємо текст
+          $('.text-hidden-hidden').fadeIn('slow'); // Плавно показуємо текст
           $(this).hide(); // Ховаємо кнопку "читати далі"
           $('.read-less').show(); // Показуємо кнопку "згорнути"
         });
@@ -899,7 +899,7 @@
         // Згортання тексту
         $('.read-less').click(function (e) {
           e.preventDefault(); // Забороняємо стандартну поведінку посилання
-          $('.text-hidden-hidden').slideUp('slow'); // Плавно ховаємо текст
+          $('.text-hidden-hidden').fadeOut('slow'); // Плавно ховаємо текст
           $(this).hide(); // Ховаємо кнопку "згорнути"
           $('.read-more').show(); // Показуємо кнопку "читати далі"
         });
