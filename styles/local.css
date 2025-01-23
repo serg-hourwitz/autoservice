@@ -947,6 +947,13 @@ input::placeholder {
   gap: 30px;
 }
 
+.phone, .address-title {
+  font-weight: var(--fw-semibold);
+}
+
+.footer-contacts-address-link {
+  text-decoration: underline;
+}
 .footer-contacts-row-top,
 .footer-contacts-row-bottom {
   display: flex;
