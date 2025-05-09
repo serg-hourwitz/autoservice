@@ -158,6 +158,8 @@
   background-image: url(../images/bgd.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header-banner-info {
@@ -777,6 +779,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .booking-header-text {
@@ -885,6 +888,13 @@ input::placeholder {
   font-weight: var(--fw-bold);
   padding: 20px;
   margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .booking {
+    background-size: contain;
+    background-attachment: inherit;
+  }
 }
 
 @media (max-width: 992px) {
